@@ -126,44 +126,178 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-body,
-header,
-section,
-aside,
-footer {
+* {
   margin: 0;
-  padding: 20px;
-  border: 1px solid #000000;
+  padding: 0;
+}
+*,
+:before,
+:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: "Lato", sans-serif;
+  color: #00101e;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+h3 {
+  font-size: 2.8rem;
+}
+p {
+  font-size: 1.6rem;
+  line-height: 1.4;
+}
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.btn {
+  background: #002341;
+  border-radius: 4px;
+  border: 0;
   color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.6em;
+  letter-spacing: 0.125em;
+  line-height: 3.25em;
+  min-width: 15em;
+  padding: 0 1.5em;
+  text-align: center;
+  text-decoration: none;
 }
 body {
-  background: #000000;
-}
-header {
-  background: #03a9f4;
+  background: #ffffff;
 }
 .hero {
-  background: #d22b1f;
+  padding: 100px 0;
+  height: 60vh;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding: 30% 2% 0;
+  background: #00101e;
 }
-.content {
-  background: #129a22;
-  flex: 1;
+.hero .clip-text {
+  background: url(../img/granite-quad.png);
+  background-size: 100% auto;
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  font-size: 22vw;
+  font-weight: 900;
+  text-align: center;
 }
-.sidebar {
-  border: 1px solid #000000;
-  background: #673ab7;
-  flex: 0 1 300px;
+.about {
+  background: #2d86ae;
+  padding: 200px 1%;
 }
-footer {
-  border: 1px solid #000000;
-  background: #616161;
+.about .about-text {
+  padding: 0 8%;
 }
-@media screen and (min-width: 640px) {
+@media (min-width: 750px) {
+  .about .about-composition {
+    position: relative;
+    margin-right: 8%;
+  }
+  .about .about-composition .composition-photo {
+    width: 65%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 2px;
+    position: absolute;
+    z-index: 10;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    outline-offset: 2rem;
+  }
+  .about .about-composition .composition-photo-1 {
+    left: 0;
+    top: -5rem;
+  }
+  .about .about-composition .composition-photo-2 {
+    right: 0;
+    top: -1rem;
+  }
+  .about .about-composition .composition-photo-3 {
+    left: 20%;
+    top: 7rem;
+  }
+  .about .about-composition .composition-photo:hover {
+    outline: 1.5rem solid #2d86ae;
+    transform: scale(1.05) translateY(-0.5rem);
+    box-shadow: 0 2.5rem 4rem rgba(0, 16, 30, 0.5);
+    z-index: 20;
+  }
+  .about .about-composition:hover .composition-photo:not(:hover) {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+}
+@media (min-width: 1050px) {
+  .about .about-composition .composition-photo {
+    width: 55%;
+  }
+}
+.features {
+  background: url(../img/granite-quad.png);
+  background-size: 100% auto;
+  padding: 200px 1%;
+}
+.features h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.features .feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 6.5rem 2rem;
+  margin: 0 2rem;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.features .feature-box p {
+  line-height: 2;
+}
+.features .feature-box:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+}
+.ready {
+  background: #f3daa3;
+  padding: 200px 1%;
+  text-align: center;
+}
+@media (min-width: 750px) {
   .flex-container {
     display: flex;
   }
 }
-.wrapper {
-  margin: auto;
-  max-width: 1200px;
+.third {
+  flex: 1;
+}
+.half {
+  flex: 1;
 }
