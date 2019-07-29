@@ -7,20 +7,17 @@ footer {
 }
 
 body {
-  background: #ffffff;
-}
-
-header {
+  .sunset-gradient();
 }
 
 .hero {
-  padding: 100px 0;
+  margin-top: 110px;
   // background: url(../img/granite-quad.png);
   height: 60vh;
 
   background-position: top center;
   background-repeat: no-repeat;
-  padding: 30% 2% 0;
+
   background: @color-black;
 
   .clip-text {
@@ -37,6 +34,7 @@ header {
     font-size: 22vw;
     font-weight: 900;
     text-align: center;
+    padding: 200px 2% 0;
   }
 }
 
@@ -82,7 +80,7 @@ header {
       }
 
       .composition-photo:hover {
-        outline: 1.5rem solid @color-primary;
+        outline: 1.5rem solid @color-accent;
         transform: scale(1.05) translateY(-0.5rem);
         box-shadow: 0 2.5rem 4rem rgba(@rich-black, 0.5);
         z-index: 20;
@@ -110,7 +108,13 @@ header {
 
   h2 {
     text-align: center;
-    margin-bottom: 3rem;
+    margin: 0 auto 3rem;
+    background: rgba(0, 35, 65, 0.85);
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 3px;
+
+    max-width: fit-content;
   }
 
   .feature-box {
@@ -138,12 +142,77 @@ header {
 }
 
 .ready {
-  background: @color-secondary-light;
+  background: @color-black;
+  margin-top: 150px;
   padding: 200px 1%;
   text-align: center;
+  color: #ffffff;
+  .clip-path-mountain();
 }
 
-footer {
+.footer {
+  background: @color-black;
+  color: @color-primary;
+  padding: 20px 2%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  .nav-logo {
+    flex: 1;
+  }
+
+  .nav-bar {
+    flex: 3;
+    text-align: center;
+
+    a {
+      color: @color-primary;
+      text-decoration: none;
+      padding: 5px 0;
+      margin: 0 20px;
+      position: relative;
+      font-size: 1.4rem;
+    }
+
+    a:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #ffffff;
+      visibility: hidden;
+      -webkit-transform: scale3d(0, 1, 1);
+      transform: scale3d(0, 1, 1);
+      -webkit-transform-origin: center left;
+      transform-origin: center left;
+      -webkit-transition: all 0.3s ease-in-out 0s;
+      transition: all 0.3s ease-in-out 0s;
+    }
+
+    a:hover {
+      color: #ffffff;
+    }
+
+    a:hover:before {
+      visibility: visible;
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  .nav-text {
+    flex: 1;
+    text-align: right;
+
+    p {
+      font-size: 1rem;
+    }
+  }
 }
 
 .flex-container {

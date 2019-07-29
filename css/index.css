@@ -146,7 +146,6 @@ body {
   color: #00101e;
 }
 h1,
-h2,
 h3,
 h4,
 h5 {
@@ -154,24 +153,30 @@ h5 {
   text-transform: uppercase;
 }
 h2 {
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
   font-size: 4.5rem;
-  font-weight: 700;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
   margin-bottom: 2rem;
 }
 h3 {
   font-size: 2.8rem;
 }
+h4 {
+  font-size: 2rem;
+}
 p {
   font-size: 1.6rem;
   line-height: 1.4;
 }
-.wrapper {
+.main-section {
+  max-width: 1500px;
   margin: 0 auto;
-  max-width: 1200px;
 }
 .btn {
-  background: #002341;
-  border-radius: 4px;
+  background: #d4593d;
+  border-radius: 50px;
   border: 0;
   color: #ffffff;
   cursor: pointer;
@@ -183,16 +188,107 @@ p {
   padding: 0 1.5em;
   text-align: center;
   text-decoration: none;
+  transition: transform 0.7s;
+}
+.btn:hover {
+  transform: translateY(-3px);
+}
+.btn:active {
+  transform: translateY(-1px);
+}
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  background: #00101e;
+  z-index: 100;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+.navigation .nav-left {
+  flex: 0.5;
+}
+.navigation .nav-logo {
+  color: #ffffff;
+  padding: 35px 2%;
+}
+.navigation .nav-right {
+  flex: 2;
+  text-align: right;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+}
+.navigation .nav-right .nav-login .nav-btn {
+  cursor: pointer;
+  border: #ffffff 2px solid;
+  background: #00101e;
+  border-radius: 50px;
+  margin: 0 20px 10px;
+  padding: 10px 30px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.navigation .nav-right .nav-login .nav-btn a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+.navigation .nav-right .nav-login .nav-btn:hover {
+  background: #d4593d;
+  border: #d4593d 2px solid;
+}
+.navigation .nav-right .nav-bar a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 0;
+  margin: 0 20px;
+  position: relative;
+}
+.navigation .nav-right .nav-bar a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  visibility: hidden;
+  -webkit-transform: scale3d(0, 1, 1);
+  transform: scale3d(0, 1, 1);
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.navigation .nav-right .nav-bar a:hover {
+  color: #ffffff;
+}
+.navigation .nav-right .nav-bar a:hover:before {
+  visibility: visible;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
 }
 body {
-  background: #ffffff;
+  background: #df9b02;
+  background: -moz-linear-gradient(180deg, #df9b02 0%, #e67943 33%, #d4593d 55%, #845259 80%, #00101e 100%);
+  background: -webkit-linear-gradient(180deg, #df9b02 0%, #e67943 33%, #d4593d 55%, #845259 80%, #00101e 100%);
+  background: linear-gradient(180deg, #df9b02 0%, #e67943 33%, #d4593d 55%, #845259 80%, #00101e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#df9b02", endColorstr="#002341", GradientType=1);
 }
 .hero {
-  padding: 100px 0;
+  margin-top: 110px;
   height: 60vh;
   background-position: top center;
   background-repeat: no-repeat;
-  padding: 30% 2% 0;
   background: #00101e;
 }
 .hero .clip-text {
@@ -206,6 +302,7 @@ body {
   font-size: 22vw;
   font-weight: 900;
   text-align: center;
+  padding: 200px 2% 0;
 }
 .about {
   background: #2d86ae;
@@ -242,7 +339,7 @@ body {
     top: 7rem;
   }
   .about .about-composition .composition-photo:hover {
-    outline: 1.5rem solid #2d86ae;
+    outline: 1.5rem solid #845259;
     transform: scale(1.05) translateY(-0.5rem);
     box-shadow: 0 2.5rem 4rem rgba(0, 16, 30, 0.5);
     z-index: 20;
@@ -264,7 +361,12 @@ body {
 }
 .features h2 {
   text-align: center;
-  margin-bottom: 3rem;
+  margin: 0 auto 3rem;
+  background: rgba(0, 35, 65, 0.85);
+  color: #ffffff;
+  padding: 5px;
+  border-radius: 3px;
+  max-width: fit-content;
 }
 .features .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -286,9 +388,68 @@ body {
   transform: translateY(-1.5rem) scale(1.03);
 }
 .ready {
-  background: #f3daa3;
+  background: #00101e;
+  margin-top: 150px;
   padding: 200px 1%;
   text-align: center;
+  color: #ffffff;
+  -webkit-clip-path: polygon(0% 30%, 12% 26%, 14% 27%, 17% 27%, 24% 33%, 30% 26%, 32% 23%, 33% 23%, 33% 22%, 34% 22%, 37% 20%, 38% 21%, 39% 20%, 40% 16%, 44% 12%, 45% 14%, 47% 12%, 48% 12%, 52% 7%, 53% 10%, 57% 14%, 61% 15%, 63% 18%, 67% 21%, 71% 29%, 73% 30%, 74% 33%, 77% 34%, 79% 33%, 81% 36%, 84% 37%, 88% 35%, 90% 35%, 94% 31%, 95% 31%, 96% 31%, 97% 32%, 100% 31%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 30%, 12% 26%, 14% 27%, 17% 27%, 24% 33%, 30% 26%, 32% 23%, 33% 23%, 33% 22%, 34% 22%, 37% 20%, 38% 21%, 39% 20%, 40% 16%, 44% 12%, 45% 14%, 47% 12%, 48% 12%, 52% 7%, 53% 10%, 57% 14%, 61% 15%, 63% 18%, 67% 21%, 71% 29%, 73% 30%, 74% 33%, 77% 34%, 79% 33%, 81% 36%, 84% 37%, 88% 35%, 90% 35%, 94% 31%, 95% 31%, 96% 31%, 97% 32%, 100% 31%, 100% 100%, 0% 100%);
+}
+.footer {
+  background: #00101e;
+  color: #2d86ae;
+  padding: 20px 2%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .nav-logo {
+  flex: 1;
+}
+.footer .nav-bar {
+  flex: 3;
+  text-align: center;
+}
+.footer .nav-bar a {
+  color: #2d86ae;
+  text-decoration: none;
+  padding: 5px 0;
+  margin: 0 20px;
+  position: relative;
+  font-size: 1.4rem;
+}
+.footer .nav-bar a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  visibility: hidden;
+  -webkit-transform: scale3d(0, 1, 1);
+  transform: scale3d(0, 1, 1);
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.footer .nav-bar a:hover {
+  color: #ffffff;
+}
+.footer .nav-bar a:hover:before {
+  visibility: visible;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+.footer .nav-text {
+  flex: 1;
+  text-align: right;
+}
+.footer .nav-text p {
+  font-size: 1rem;
 }
 @media (min-width: 750px) {
   .flex-container {
