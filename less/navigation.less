@@ -1,25 +1,68 @@
+// Sidenav navicon
+.openbtn {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: @color-black;
+  border: 0;
+
+  .navicon {
+    width: 35px;
+    height: 5px;
+    background: @color-white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .bar1 {
+    -webkit-transform: rotate(0deg) translate(0, 0);
+    transform: rotate(0deg) translate(0, 0);
+  }
+
+  .bar2 {
+    opacity: 1;
+  }
+
+  .bar3 {
+    -webkit-transform: rotate(0deg) translate(0, 0);
+    transform: rotate(0deg) translate(0, 0);
+  }
+
+  @media @tablet {
+    top: -500px;
+    left: -500px;
+  }
+}
+
+.change {
+  .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .bar2 {
+    opacity: 0;
+  }
+
+  .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
+
+// Nav Styling
 .navigation {
+  height: 100%;
+  width: 0;
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 110px;
-  background: @color-black;
-  z-index: 100;
-
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  background-color: @color-black;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.7s;
   text-transform: uppercase;
-
-  //   @media @phone {
-  //     flex-direction: column;
-  //   }
-
-  .nav-left {
-    flex: 0.5;
-  }
 
   .nav-logo {
     color: @color-white;
@@ -27,8 +70,6 @@
   }
 
   .nav-right {
-    flex: 2;
-    text-align: right;
     font-size: 1.4rem;
     letter-spacing: 0.2rem;
 
@@ -58,13 +99,6 @@
       .nav-btn:hover {
         background: @color-tertiary;
         border: @color-tertiary 2px solid;
-        // transform: translateY(-3px);
-        // box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
-
-      .nav-btn:active {
-        // transform: translateY(-1px);
-        // box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       }
     }
 
@@ -73,7 +107,8 @@
         color: @color-white;
         text-decoration: none;
         padding: 5px 0;
-        margin: 0 20px;
+        margin: 0 50px;
+        line-height: 3;
         position: relative;
       }
 
@@ -104,9 +139,37 @@
         transform: scale3d(1, 1, 1);
       }
     }
-
-    // @media @phone {
-    //   margin: 0 auto;
-    // }
   }
+
+  @media @tablet {
+    width: 100%;
+    height: 110px;
+    background: @color-black;
+    padding-top: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-left {
+      flex: 0.5;
+    }
+
+    .nav-right {
+      flex: 2;
+      text-align: right;
+
+      .nav-bar {
+        a {
+          padding: 5px 0;
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  width: 250px;
 }

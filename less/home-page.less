@@ -3,8 +3,6 @@ body {
 }
 
 .hero {
-  margin-top: 110px;
-  // background: url(../img/granite-quad.png);
   height: 60vh;
 
   background-position: top center;
@@ -28,18 +26,52 @@ body {
     text-align: center;
     padding: 200px 2% 0;
   }
+
+  @media @tablet {
+    margin-top: 110px;
+  }
 }
 
 .about {
   background: @color-primary;
-
   padding: 200px 1%;
 
   .about-text {
     padding: 0 8%;
+    margin-bottom: 100px;
+  }
+
+  .about-composition {
+    position: relative;
+    padding: 200px 0;
+    margin: 50px 2% 0px;
+
+    .composition-photo {
+      width: 65%;
+      box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+      border-radius: 2px;
+      position: absolute;
+    }
+
+    .composition-photo-1 {
+      left: 0;
+      top: -5rem;
+    }
+
+    .composition-photo-2 {
+      right: 0;
+      top: -1rem;
+    }
+
+    .composition-photo-3 {
+      left: 20%;
+      top: 7rem;
+    }
   }
 
   @media @tablet {
+    padding: 200px 1% 0;
+
     .about-composition {
       position: relative;
       margin-right: 8%;
@@ -87,7 +119,22 @@ body {
   @media @desktop {
     .about-composition {
       .composition-photo {
-        width: 55%;
+        width: 65%;
+      }
+
+      .composition-photo-1 {
+        left: 0;
+        top: -12rem;
+      }
+
+      .composition-photo-2 {
+        right: 0;
+        top: -5rem;
+      }
+
+      .composition-photo-3 {
+        left: 20%;
+        top: 5rem;
       }
     }
   }
@@ -118,7 +165,7 @@ body {
   .feature-box {
     background-color: rgba(255, 255, 255, 0.8);
     padding: 3.5rem 2rem 5rem;
-    margin: 0 2rem;
+    margin: 50px 2rem 0;
     text-align: center;
 
     border-radius: 3px;

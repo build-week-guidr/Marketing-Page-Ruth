@@ -196,30 +196,66 @@ p {
 .btn:active {
   transform: translateY(-1px);
 }
+.openbtn {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: #00101e;
+  border: 0;
+}
+.openbtn .navicon {
+  width: 35px;
+  height: 5px;
+  background: #fdfbf6;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.openbtn .bar1 {
+  -webkit-transform: rotate(0deg) translate(0, 0);
+  transform: rotate(0deg) translate(0, 0);
+}
+.openbtn .bar2 {
+  opacity: 1;
+}
+.openbtn .bar3 {
+  -webkit-transform: rotate(0deg) translate(0, 0);
+  transform: rotate(0deg) translate(0, 0);
+}
+@media (min-width: 750px) {
+  .openbtn {
+    top: -500px;
+    left: -500px;
+  }
+}
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {
+  opacity: 0;
+}
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
 .navigation {
+  height: 100%;
+  width: 0;
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 110px;
-  background: #00101e;
-  z-index: 100;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #00101e;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.7s;
   text-transform: uppercase;
-}
-.navigation .nav-left {
-  flex: 0.5;
 }
 .navigation .nav-logo {
   color: #fdfbf6;
   padding: 35px 2%;
 }
 .navigation .nav-right {
-  flex: 2;
-  text-align: right;
   font-size: 1.4rem;
   letter-spacing: 0.2rem;
 }
@@ -250,7 +286,8 @@ p {
   color: #fdfbf6;
   text-decoration: none;
   padding: 5px 0;
-  margin: 0 20px;
+  margin: 0 50px;
+  line-height: 3;
   position: relative;
 }
 .navigation .nav-right .nav-bar a:before {
@@ -277,6 +314,32 @@ p {
   -webkit-transform: scale3d(1, 1, 1);
   transform: scale3d(1, 1, 1);
 }
+@media (min-width: 750px) {
+  .navigation {
+    width: 100%;
+    height: 110px;
+    background: #00101e;
+    padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navigation .nav-left {
+    flex: 0.5;
+  }
+  .navigation .nav-right {
+    flex: 2;
+    text-align: right;
+  }
+  .navigation .nav-right .nav-bar a {
+    padding: 5px 0;
+    margin: 0 20px;
+  }
+}
+.active {
+  width: 250px;
+}
 body {
   background: #df9b02;
   background: -moz-linear-gradient(180deg, #df9b02 0%, #e67943 33%, #d4593d 55%, #845259 80%, #00101e 100%);
@@ -285,7 +348,6 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#df9b02", endColorstr="#002341", GradientType=1);
 }
 .hero {
-  margin-top: 110px;
   height: 60vh;
   background-position: top center;
   background-repeat: no-repeat;
@@ -304,14 +366,46 @@ body {
   text-align: center;
   padding: 200px 2% 0;
 }
+@media (min-width: 750px) {
+  .hero {
+    margin-top: 110px;
+  }
+}
 .about {
   background: #2d86ae;
   padding: 200px 1%;
 }
 .about .about-text {
   padding: 0 8%;
+  margin-bottom: 100px;
+}
+.about .about-composition {
+  position: relative;
+  padding: 200px 0;
+  margin: 50px 2% 0px;
+}
+.about .about-composition .composition-photo {
+  width: 65%;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  position: absolute;
+}
+.about .about-composition .composition-photo-1 {
+  left: 0;
+  top: -5rem;
+}
+.about .about-composition .composition-photo-2 {
+  right: 0;
+  top: -1rem;
+}
+.about .about-composition .composition-photo-3 {
+  left: 20%;
+  top: 7rem;
 }
 @media (min-width: 750px) {
+  .about {
+    padding: 200px 1% 0;
+  }
   .about .about-composition {
     position: relative;
     margin-right: 8%;
@@ -351,7 +445,19 @@ body {
 }
 @media (min-width: 1050px) {
   .about .about-composition .composition-photo {
-    width: 55%;
+    width: 65%;
+  }
+  .about .about-composition .composition-photo-1 {
+    left: 0;
+    top: -12rem;
+  }
+  .about .about-composition .composition-photo-2 {
+    right: 0;
+    top: -5rem;
+  }
+  .about .about-composition .composition-photo-3 {
+    left: 20%;
+    top: 5rem;
   }
 }
 .features {
@@ -376,7 +482,7 @@ body {
 .features .feature-box {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 3.5rem 2rem 5rem;
-  margin: 0 2rem;
+  margin: 50px 2rem 0;
   text-align: center;
   border-radius: 3px;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -398,8 +504,8 @@ body {
   padding: 200px 1%;
   text-align: center;
   color: #fdfbf6;
-  -webkit-clip-path: polygon(0% 30%, 12% 26%, 14% 27%, 17% 27%, 24% 33%, 30% 26%, 32% 23%, 33% 23%, 33% 22%, 34% 22%, 37% 20%, 38% 21%, 39% 20%, 40% 16%, 44% 12%, 45% 14%, 47% 12%, 48% 12%, 52% 7%, 53% 10%, 57% 14%, 61% 15%, 63% 18%, 67% 21%, 71% 29%, 73% 30%, 74% 33%, 77% 34%, 79% 33%, 81% 36%, 84% 37%, 88% 35%, 90% 35%, 94% 31%, 95% 31%, 96% 31%, 97% 32%, 100% 31%, 100% 100%, 0% 100%);
-  clip-path: polygon(0% 30%, 12% 26%, 14% 27%, 17% 27%, 24% 33%, 30% 26%, 32% 23%, 33% 23%, 33% 22%, 34% 22%, 37% 20%, 38% 21%, 39% 20%, 40% 16%, 44% 12%, 45% 14%, 47% 12%, 48% 12%, 52% 7%, 53% 10%, 57% 14%, 61% 15%, 63% 18%, 67% 21%, 71% 29%, 73% 30%, 74% 33%, 77% 34%, 79% 33%, 81% 36%, 84% 37%, 88% 35%, 90% 35%, 94% 31%, 95% 31%, 96% 31%, 97% 32%, 100% 31%, 100% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 30%, 12% 26%, 14% 27%, 17% 27%, 24% 33%, 30% 25%, 33% 22%, 36% 20%, 38% 22%, 40% 16%, 44% 12%, 45% 14%, 47% 11%, 52% 7%, 54% 10%, 57% 14%, 61% 15%, 63% 18%, 67% 21%, 71% 29%, 73% 30%, 74% 33%, 77% 34%, 79% 33%, 81% 36%, 84% 37%, 88% 35%, 90% 35%, 94% 31%, 95% 29%, 97% 32%, 100% 31%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 30%, 12% 26%, 14% 27%, 17% 27%, 24% 33%, 30% 25%, 33% 22%, 36% 20%, 38% 22%, 40% 16%, 44% 12%, 45% 14%, 47% 11%, 52% 7%, 54% 10%, 57% 14%, 61% 15%, 63% 18%, 67% 21%, 71% 29%, 73% 30%, 74% 33%, 77% 34%, 79% 33%, 81% 36%, 84% 37%, 88% 35%, 90% 35%, 94% 31%, 95% 29%, 97% 32%, 100% 31%, 100% 100%, 0% 100%);
 }
 .footer {
   background: #00101e;
