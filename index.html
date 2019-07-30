@@ -24,7 +24,7 @@
   <body>
     <!-- Header -->
     <header>
-      <nav class="navigation">
+      <nav class="navigation" id="nav">
         <div class="nav-logo nav-left"><h3>Guidr</h3></div>
         <div class="nav-right">
           <div class="nav-login">
@@ -32,13 +32,42 @@
             <button href="" class="nav-btn">Login</button>
           </div>
           <div class="nav-bar">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#features" class="nav-link">Features</a>
-            <a href="#" class="nav-link">Blog</a>
-            <a href="#" class="nav-link">Contact</a>
+            <a
+              href="#about"
+              class="nav-link"
+              onclick="hideElement(), naviconAnimate()"
+              >About</a
+            >
+            <a
+              href="#features"
+              class="nav-link"
+              onclick="hideElement(), naviconAnimate()"
+              >Features</a
+            >
+            <a
+              href="#"
+              class="nav-link"
+              onclick="hideElement(), naviconAnimate()"
+              >Blog</a
+            >
+            <a
+              href="#"
+              class="nav-link"
+              onclick="hideElement(), naviconAnimate()"
+              >Contact</a
+            >
           </div>
         </div>
       </nav>
+      <button
+        onclick="hideElement(), naviconAnimate()"
+        class="openbtn"
+        id="navicon"
+      >
+        <div class="navicon bar1"></div>
+        <div class="navicon bar2"></div>
+        <div class="navicon bar3"></div>
+      </button>
     </header>
 
     <div class="wrapper">
@@ -126,10 +155,10 @@
       <footer class="footer">
         <div class="nav-logo"><h4>Guidr</h4></div>
         <div class="nav-bar">
-          <a href="" class="nav-link">About</a>
-          <a href="" class="nav-link">Features</a>
-          <a href="" class="nav-link">Blog</a>
-          <a href="" class="nav-link">Contact</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#features" class="nav-link">Features</a>
+          <a href="#" class="nav-link">Blog</a>
+          <a href="#" class="nav-link">Contact</a>
         </div>
         <div class="nav-text">
           <p>
@@ -144,4 +173,16 @@
 
     <!-- Footer -->
   </body>
+
+  <script>
+    function naviconAnimate() {
+      const navicon = document.getElementById("navicon");
+      navicon.classList.toggle("change");
+    }
+
+    function hideElement() {
+      const controlBox = document.getElementById("nav");
+      controlBox.classList.toggle("active");
+    }
+  </script>
 </html>
