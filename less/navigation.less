@@ -1,0 +1,175 @@
+// Sidenav navicon
+.openbtn {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  background: @color-black;
+  border: 0;
+
+  .navicon {
+    width: 35px;
+    height: 5px;
+    background: @color-white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .bar1 {
+    -webkit-transform: rotate(0deg) translate(0, 0);
+    transform: rotate(0deg) translate(0, 0);
+  }
+
+  .bar2 {
+    opacity: 1;
+  }
+
+  .bar3 {
+    -webkit-transform: rotate(0deg) translate(0, 0);
+    transform: rotate(0deg) translate(0, 0);
+  }
+
+  @media @tablet {
+    top: -500px;
+    left: -500px;
+  }
+}
+
+.change {
+  .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .bar2 {
+    opacity: 0;
+  }
+
+  .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+}
+
+// Nav Styling
+.navigation {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  background-color: @color-black;
+  overflow-x: hidden;
+  padding-top: 60px;
+  transition: 0.7s;
+  text-transform: uppercase;
+
+  .nav-logo {
+    color: @color-white;
+    padding: 35px 2%;
+  }
+
+  .nav-right {
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+
+    .nav-login {
+      .nav-btn {
+        cursor: pointer;
+        border: @color-white 2px solid;
+        background: @color-black;
+        border-radius: 50px;
+        margin: 0 20px 10px;
+        padding: 10px 30px;
+
+        color: @color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      .nav-btn a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+      }
+
+      .nav-btn:hover {
+        background: @color-tertiary;
+        border: @color-tertiary 2px solid;
+      }
+    }
+
+    .nav-bar {
+      a {
+        color: @color-white;
+        text-decoration: none;
+        padding: 5px 0;
+        margin: 0 50px;
+        line-height: 3;
+        position: relative;
+      }
+
+      a:before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: @color-white;
+        visibility: hidden;
+        -webkit-transform: scale3d(0, 1, 1);
+        transform: scale3d(0, 1, 1);
+        -webkit-transform-origin: center left;
+        transform-origin: center left;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+      }
+
+      a:hover {
+        color: @color-white;
+      }
+
+      a:hover:before {
+        visibility: visible;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+      }
+    }
+  }
+
+  @media @tablet {
+    width: 100%;
+    height: 110px;
+    background: @color-black;
+    padding-top: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-left {
+      flex: 0.5;
+    }
+
+    .nav-right {
+      flex: 2;
+      text-align: right;
+
+      .nav-bar {
+        a {
+          padding: 5px 0;
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+}
+
+.active {
+  width: 250px;
+}
