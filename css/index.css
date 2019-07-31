@@ -255,8 +255,11 @@ p {
   text-transform: uppercase;
 }
 .navigation .nav-logo {
-  color: #fdfbf6;
-  padding: 35px 2%;
+  padding: 35px 30px;
+}
+.navigation .nav-logo .logo {
+  width: 100px;
+  height: auto;
 }
 .navigation .nav-right {
   font-size: 1.4rem;
@@ -331,6 +334,13 @@ p {
   }
   .navigation .nav-left {
     flex: 0.5;
+  }
+  .navigation .nav-logo {
+    padding: 20px 30px;
+  }
+  .navigation .nav-logo .logo {
+    width: 50px;
+    height: auto;
   }
   .navigation .nav-right {
     flex: 2;
@@ -540,9 +550,9 @@ body {
   color: #fdfbf6;
   text-decoration: none;
   padding: 5px 0;
-  margin: 0 20px;
+  margin: 0 10px;
   position: relative;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 .footer .nav-bar a:before {
   content: "";
@@ -573,7 +583,19 @@ body {
   text-align: right;
 }
 .footer .nav-text p {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  line-height: 0;
+  margin-bottom: 0;
+}
+@media (min-width: 750px) {
+  .footer .nav-bar a {
+    padding: 5px 0;
+    margin: 0 20px;
+    font-size: 1.4rem;
+  }
+  .footer .nav-text p {
+    font-size: 1.4rem;
+  }
 }
 @media (min-width: 750px) {
   .flex-container {
