@@ -5,16 +5,14 @@ body {
 .hero {
   height: 60vh;
 
-  background-position: top center;
-  background-repeat: no-repeat;
-
   background: @color-black;
 
   .clip-text {
     background: url(../img/granite-quad.png);
-    background-size: 100% auto;
-
     background-attachment: fixed;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 
@@ -194,6 +192,14 @@ body {
 
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.03);
+  }
+
+  @media @tablet {
+    height: 900px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 

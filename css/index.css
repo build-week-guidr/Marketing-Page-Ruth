@@ -363,14 +363,14 @@ body {
 }
 .hero {
   height: 60vh;
-  background-position: top center;
-  background-repeat: no-repeat;
   background: #00101e;
 }
 .hero .clip-text {
   background: url(../img/granite-quad.png);
-  background-size: 100% auto;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   font-family: "Cinzel", serif;
@@ -520,6 +520,15 @@ body {
 }
 .features .feature-box:hover {
   transform: translateY(-1.5rem) scale(1.03);
+}
+@media (min-width: 750px) {
+  .features {
+    height: 900px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 .ready {
   background: #00101e;
