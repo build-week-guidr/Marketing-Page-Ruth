@@ -169,6 +169,7 @@ h4 {
 p {
   font-size: 1.6rem;
   line-height: 1.4;
+  margin-bottom: 15px;
 }
 .main-section {
   max-width: 1500px;
@@ -178,17 +179,19 @@ p {
   background: #d4593d;
   border-radius: 50px;
   border: 0;
-  color: #fdfbf6;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.6em;
-  letter-spacing: 0.125em;
-  line-height: 3.25em;
   min-width: 15em;
   padding: 0 1.5em;
-  text-align: center;
-  text-decoration: none;
   transition: transform 0.7s;
+}
+.btn a {
+  color: #fdfbf6;
+  text-decoration: none;
+  font-size: 1.45em;
+  letter-spacing: 0.125em;
+  line-height: 3.25em;
+  text-align: center;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -277,6 +280,7 @@ p {
   text-decoration: none;
   text-transform: uppercase;
   font-size: 1.4rem;
+  color: #fdfbf6;
 }
 .navigation .nav-right .nav-login .nav-btn:hover {
   background: #d4593d;
@@ -364,11 +368,17 @@ body {
   font-size: 22vw;
   font-weight: 900;
   text-align: center;
-  padding: 200px 2% 0;
+  padding: 20vh 2% 0;
 }
 @media (min-width: 750px) {
   .hero {
     margin-top: 110px;
+  }
+}
+@media (min-width: 1050px) {
+  .hero .clip-text {
+    padding: 5vh 2% 0;
+    font-size: 27rem;
   }
 }
 .about {
@@ -491,6 +501,9 @@ body {
   transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
   transition: transform 0.3s, -webkit-transform 0.3s;
+}
+.features .feature-box h3 {
+  margin-bottom: 20px;
 }
 .features .feature-box p {
   line-height: 2;

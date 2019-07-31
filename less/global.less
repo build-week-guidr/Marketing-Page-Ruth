@@ -49,6 +49,7 @@ h4 {
 p {
   font-size: 1.6rem;
   line-height: 1.4;
+  margin-bottom: 15px;
 }
 
 .main-section {
@@ -60,17 +61,20 @@ p {
   background: @color-tertiary;
   border-radius: 50px;
   border: 0;
-  color: @color-white;
   cursor: pointer;
   display: inline-block;
-  font-size: 1.6em;
-  letter-spacing: 0.125em;
-  line-height: 3.25em;
   min-width: 15em;
   padding: 0 1.5em;
-  text-align: center;
-  text-decoration: none;
   transition: transform 0.7s;
+
+  a {
+    color: @color-white;
+    text-decoration: none;
+    font-size: 1.45em;
+    letter-spacing: 0.125em;
+    line-height: 3.25em;
+    text-align: center;
+  }
 }
 
 .btn:hover {
