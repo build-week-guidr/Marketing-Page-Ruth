@@ -1,10 +1,11 @@
 // Sidenav navicon
 .openbtn {
-  position: absolute;
+  position: fixed;
   top: 6px;
   right: 10px;
-  background: @color-black;
+  background: none;
   border: 0;
+  z-index: 200;
 
   .navicon {
     width: 35px;
@@ -12,20 +13,24 @@
     background: @color-white;
     margin: 6px 0;
     transition: 0.4s;
+    box-shadow: 3px 3.5px 5px @color-black;
   }
 
   .bar1 {
     -webkit-transform: rotate(0deg) translate(0, 0);
     transform: rotate(0deg) translate(0, 0);
+    box-shadow: 3px 3.5px 5px @color-black;
   }
 
   .bar2 {
     opacity: 1;
+    box-shadow: 3px 3.5px 5px @color-black;
   }
 
   .bar3 {
     -webkit-transform: rotate(0deg) translate(0, 0);
     transform: rotate(0deg) translate(0, 0);
+    box-shadow: 3px 3.5px 5px @color-black;
   }
 
   @media @tablet {
@@ -38,15 +43,20 @@
   .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
+    box-shadow: none;
+    background: @color-tertiary-light;
   }
 
   .bar2 {
     opacity: 0;
+    box-shadow: none;
   }
 
   .bar3 {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
+    box-shadow: none;
+    background: @color-tertiary-light;
   }
 }
 

@@ -200,11 +200,12 @@ p {
   transform: translateY(-1px);
 }
 .openbtn {
-  position: absolute;
+  position: fixed;
   top: 6px;
   right: 10px;
-  background: #00101e;
+  background: none;
   border: 0;
+  z-index: 200;
 }
 .openbtn .navicon {
   width: 35px;
@@ -212,17 +213,21 @@ p {
   background: #fdfbf6;
   margin: 6px 0;
   transition: 0.4s;
+  box-shadow: 3px 3.5px 5px #00101e;
 }
 .openbtn .bar1 {
   -webkit-transform: rotate(0deg) translate(0, 0);
   transform: rotate(0deg) translate(0, 0);
+  box-shadow: 3px 3.5px 5px #00101e;
 }
 .openbtn .bar2 {
   opacity: 1;
+  box-shadow: 3px 3.5px 5px #00101e;
 }
 .openbtn .bar3 {
   -webkit-transform: rotate(0deg) translate(0, 0);
   transform: rotate(0deg) translate(0, 0);
+  box-shadow: 3px 3.5px 5px #00101e;
 }
 @media (min-width: 750px) {
   .openbtn {
@@ -233,13 +238,18 @@ p {
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
   transform: rotate(-45deg) translate(-9px, 6px);
+  box-shadow: none;
+  background: #e67943;
 }
 .change .bar2 {
   opacity: 0;
+  box-shadow: none;
 }
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
+  box-shadow: none;
+  background: #e67943;
 }
 .navigation {
   height: 100%;
@@ -393,7 +403,7 @@ body {
 }
 .about {
   background: #2d86ae;
-  padding: 200px 1%;
+  padding: 200px 1% 100px;
 }
 .about .about-text {
   padding: 0 8%;
@@ -551,6 +561,10 @@ body {
 .footer .nav-logo {
   flex: 1;
 }
+.footer .nav-logo a {
+  text-decoration: none;
+  color: #fdfbf6;
+}
 .footer .nav-bar {
   flex: 3;
   text-align: center;
@@ -616,4 +630,10 @@ body {
 }
 .half {
   flex: 1;
+}
+.contact {
+  background: #845259;
+  padding: 200px 1%;
+  margin: 0 auto;
+  text-align: center;
 }
