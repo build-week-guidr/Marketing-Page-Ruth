@@ -2,7 +2,7 @@ body {
   .sunset-gradient();
 }
 
-.hero {
+.hero-home {
   height: 60vh;
 
   background: @color-black;
@@ -168,33 +168,6 @@ body {
     max-width: fit-content;
   }
 
-  .feature-box {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 3.5rem 2rem 5rem;
-    margin: 50px 2rem 0;
-    text-align: center;
-
-    border-radius: 3px;
-    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
-    transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
-
-    h3 {
-      margin-bottom: 20px;
-    }
-
-    p {
-      line-height: 2;
-    }
-  }
-
-  .feature-box:hover {
-    transform: translateY(-1.5rem) scale(1.03);
-  }
-
   @media @tablet {
     height: 900px;
     background-attachment: fixed;
@@ -202,6 +175,33 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 3.5rem 2rem 5rem;
+  margin: 50px 2rem 0;
+  text-align: center;
+
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    line-height: 2;
+  }
+}
+
+.feature-box:hover {
+  transform: translateY(-1.5rem) scale(1.03);
 }
 
 .ready {
