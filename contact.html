@@ -83,51 +83,53 @@
       </section>
       <!-- Content -->
       <section class="contact" id="contact">
-        <h2>Contact Us</h2>
-        <p>
-          Questions? Concerns? Ideas? Go on an awesome trek? We'd love to hear
-          from you.
-        </p>
-        <div class="contact-form">
-          <form
-            action="https://formspree.io/r.poliakon@gmail.com"
-            method="POST"
-          >
-            <div class="form-info  flex-container">
-              <div class="form-name half">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  id="name"
-                  required
-                />
-                <label for="name">Name</label>
+        <div class="main-section">
+          <h2>Contact Us</h2>
+          <p>
+            Questions? Concerns? Ideas? Go on an awesome trek? We'd love to hear
+            from you.
+          </p>
+          <div class="contact-form">
+            <form
+              action="https://formspree.io/r.poliakon@gmail.com"
+              method="POST"
+            >
+              <div class="form-info  flex-container">
+                <div class="form-name half">
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    id="name"
+                    required
+                  />
+                  <label for="name">Name</label>
+                </div>
+
+                <div class="form-email half">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    id="email"
+                    required
+                  />
+                  <label for="email">Email</label>
+                </div>
               </div>
 
-              <div class="form-email half">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  id="email"
-                  required
-                />
-                <label for="email">Email</label>
+              <div class="form-message">
+                <textarea
+                  name="message"
+                  placeholder="Message"
+                  rows="6"
+                ></textarea>
               </div>
-            </div>
-
-            <div class="form-message">
-              <textarea
-                name="message"
-                placeholder="Message"
-                rows="6"
-              ></textarea>
-            </div>
-            <div>
-              <input type="submit" value="Send Message" class="form-btn" />
-            </div>
-          </form>
+              <div>
+                <input type="submit" value="Send Message" class="form-btn" />
+              </div>
+            </form>
+          </div>
         </div>
       </section>
       <footer class="footer">

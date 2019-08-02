@@ -394,6 +394,7 @@ body {
   background-repeat: no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   font-family: "Cinzel", serif;
   text-transform: uppercase;
   font-size: 22vw;
@@ -647,7 +648,7 @@ body {
   font-size: 22vw;
   font-weight: 900;
   text-align: center;
-  padding: 5vh 2% 0;
+  padding: 5vh 2%;
 }
 @media (min-width: 750px) {
   .hero-contact {
@@ -656,7 +657,6 @@ body {
 }
 @media (min-width: 1050px) {
   .hero-contact .clip-text {
-    padding: 5vh 2% 0;
     font-size: 27rem;
   }
 }
