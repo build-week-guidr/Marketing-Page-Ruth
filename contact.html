@@ -76,7 +76,7 @@
 
     <div class="wrapper">
       <!-- Hero -->
-      <section class="hero">
+      <section class="hero-contact">
         <div class="main-section">
           <div class="clip-text">Guidr</div>
         </div>
@@ -88,34 +88,46 @@
           Questions? Concerns? Ideas? Go on an awesome trek? We'd love to hear
           from you.
         </p>
-        <div class="main-section flex-container">
-          <div class="contact-form">
-            <form
-              action="https://formspree.io/r.poliakon@gmail.com"
-              method="POST"
-            >
-              <div class="row">
-                <div class="col-6 col-12-mobilep">
-                  <input type="text" name="name" placeholder="Name" />
-                </div>
-                <div class="col-6 col-12-mobilep">
-                  <input type="email" name="email" placeholder="Email" />
-                </div>
-                <div class="col-12">
-                  <textarea
-                    name="message"
-                    placeholder="Message"
-                    rows="6"
-                  ></textarea>
-                </div>
-                <div class="col-12">
-                  <ul class="actions special">
-                    <li><input type="submit" value="Send Message" /></li>
-                  </ul>
-                </div>
+        <div class="contact-form">
+          <form
+            action="https://formspree.io/r.poliakon@gmail.com"
+            method="POST"
+          >
+            <div class="form-info  flex-container">
+              <div class="form-name half">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  id="name"
+                  required
+                />
+                <label for="name">Name</label>
               </div>
-            </form>
-          </div>
+
+              <div class="form-email half">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  id="email"
+                  required
+                />
+                <label for="email">Email</label>
+              </div>
+            </div>
+
+            <div class="form-message">
+              <textarea
+                name="message"
+                placeholder="Message"
+                rows="6"
+              ></textarea>
+            </div>
+            <div>
+              <input type="submit" value="Send Message" class="form-btn" />
+            </div>
+          </form>
         </div>
       </section>
       <footer class="footer">
