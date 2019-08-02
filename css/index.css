@@ -643,6 +643,7 @@ body {
   background-repeat: no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  background-clip: text;
   font-family: "Cinzel", serif;
   text-transform: uppercase;
   font-size: 22vw;
@@ -665,7 +666,6 @@ body {
   padding: 200px 1%;
   margin: 0 auto;
   text-align: center;
-  height: 90vh;
 }
 .contact .contact-form input,
 .contact .contact-form textarea {
@@ -740,6 +740,7 @@ body {
   border-radius: 50px;
   border: none;
   width: auto;
+  margin-bottom: 50px;
 }
 .contact .contact-form .form-btn:hover {
   transform: translateY(-3px);
