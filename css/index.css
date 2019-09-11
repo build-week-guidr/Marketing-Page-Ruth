@@ -197,7 +197,6 @@ body {
 }
 .hero {
   background: #00101e;
-  color: #fdfbf6;
 }
 .hero .clip-text {
   background: url(../img/granite-quad.png);
@@ -210,6 +209,7 @@ body {
   background-clip: text;
   font-family: "Cinzel", serif;
   text-transform: uppercase;
+  color: #fdfbf6;
   font-size: 22vw;
   font-weight: 900;
   text-align: center;
