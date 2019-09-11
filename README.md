@@ -11,7 +11,11 @@ This is the marketing page for the app designed during a Lambda School build wee
 ## Release History
 
 - 0.0.1
+
   - Work in progress
+
+- 0.1.1
+  - Style changes and cross-platform support
 
 ## Meta
 
