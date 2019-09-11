@@ -12,8 +12,7 @@
       margin: 10px;
       border-radius: 3px;
       background: none;
-      border: 2px solid @color-white;
-      box-shadow: none;
+      border: 3px solid @color-white;
       color: @color-white;
       font-family: @body-font;
       transition: all 0.3s;
@@ -26,11 +25,11 @@
     textarea:focus,
     input:focus {
       outline: none;
-      box-shadow: 0 1rem 2rem rgba(@color-black, 0.1);
       border: 3px solid @color-primary;
     }
 
     input:focus:invalid {
+      outline: none;
       border: 3px solid @color-tertiary;
     }
 
@@ -62,7 +61,7 @@
       font-size: 1.6rem;
     }
 
-    label {
+    .label {
       color: rgba(253, 251, 246, 0.712);
       font-family: @body-font;
       font-size: 1.6rem;
@@ -76,6 +75,12 @@
       opacity: 0;
       visibility: hidden;
       transform: translateY(-4rem);
+    }
+
+    textarea:placeholder-shown + label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-5rem);
     }
 
     .form-btn {
