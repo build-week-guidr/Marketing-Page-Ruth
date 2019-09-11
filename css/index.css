@@ -481,7 +481,10 @@ body {
   background-attachment: fixed;
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .hero-home {
   height: 60vh;
