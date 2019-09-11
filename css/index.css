@@ -172,7 +172,7 @@ p {
   margin-bottom: 15px;
 }
 body {
-  background: #00101e;
+  background-color: #00101e;
 }
 .main-section {
   max-width: 1500px;
@@ -196,20 +196,18 @@ body {
   flex: 1;
 }
 .hero {
-  background: #00101e;
+  background-color: #00101e;
 }
 .hero .clip-text {
-  background: url(../img/granite-quad.png);
+  color: #4aa6d0;
+  font-family: "Cinzel", serif;
+  text-transform: uppercase;
+  background-image: url(../img/granite-quad.png);
   background-attachment: fixed;
   background-size: cover;
-  background-position: top center;
   background-repeat: no-repeat;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-clip: text;
-  font-family: "Cinzel", serif;
-  text-transform: uppercase;
-  color: #fdfbf6;
   font-size: 22vw;
   font-weight: 900;
   text-align: center;
