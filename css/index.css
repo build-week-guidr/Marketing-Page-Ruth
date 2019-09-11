@@ -197,6 +197,7 @@ body {
 }
 .hero {
   background: #00101e;
+  color: #fdfbf6;
 }
 .hero .clip-text {
   background: url(../img/granite-quad.png);
@@ -334,6 +335,10 @@ body {
   background: #963621;
   border: #963621 2px solid;
 }
+.navigation .nav-right .nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+}
 .navigation .nav-right .nav-bar a {
   color: #fdfbf6;
   text-decoration: none;
@@ -393,6 +398,9 @@ body {
   }
   .navigation .nav-right .nav-login .nav-btn {
     padding: 10px 30px;
+  }
+  .navigation .nav-right .nav-bar {
+    display: block;
   }
   .navigation .nav-right .nav-bar a {
     padding: 5px 0;
@@ -488,23 +496,9 @@ body {
 }
 .hero-home {
   height: 60vh;
-  background: #00101e;
 }
 .hero-home .clip-text {
-  background: url(../img/granite-quad.png);
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-family: "Cinzel", serif;
-  text-transform: uppercase;
-  color: #fdfbf6;
-  font-size: 22vw;
-  font-weight: 900;
-  text-align: center;
+  height: 60vh;
   padding: 20vh 2% 0;
 }
 @media (min-width: 750px) {
