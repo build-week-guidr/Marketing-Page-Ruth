@@ -1,5 +1,8 @@
-body {
-  .sunset-gradient();
+.map-wrapper {
+  background: url(../img/granite-quad.png);
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: 100% auto;
 }
 
 .hero-home {
@@ -19,6 +22,7 @@ body {
 
     font-family: @display-font;
     text-transform: uppercase;
+    color: @color-white;
 
     font-size: 22vw;
     font-weight: 900;
@@ -40,12 +44,11 @@ body {
 
 .about {
   background: @color-primary;
-  padding: 200px 1% 100px;
+  padding: 200px 1%;
 
   .about-text {
     color: @color-black;
     padding: 0 8%;
-    margin-bottom: 100px;
   }
 
   .about-composition {
@@ -143,8 +146,6 @@ body {
 }
 
 .features {
-  background: url(../img/granite-quad.png);
-  background-size: 100% auto;
   padding: 200px 1%;
 
   .fas {
@@ -161,20 +162,12 @@ body {
 
     max-width: fit-content;
   }
-
-  @media @tablet {
-    height: 900px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 }
 
 .feature-box {
   background-color: rgba(253, 251, 246, 0.8);
   padding: 3.5rem 2rem 5rem;
-  margin: 50px 2rem 0;
+  margin: 5rem 2rem;
   text-align: center;
 
   border-radius: 20px;
@@ -195,4 +188,28 @@ body {
   text-align: center;
   color: @color-white;
   .clip-path-mountain();
+
+  h2 {
+    margin-top: 3rem;
+  }
+
+  .btn {
+    background: @color-tertiary;
+    border-radius: 50px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 15em;
+    padding: 0 1.5em;
+    transition: transform 0.7s;
+
+    a {
+      color: @color-white;
+      text-decoration: none;
+      font-size: 1.45em;
+      letter-spacing: 0.125em;
+      line-height: 3.25em;
+      text-align: center;
+    }
+  }
 }

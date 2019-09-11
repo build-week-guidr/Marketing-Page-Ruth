@@ -18,6 +18,8 @@
 
     <script src="https://kit.fontawesome.com/7e03f1d830.js"></script>
 
+    <meta name="theme-color" content="#00101e" />
+
     <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
@@ -35,10 +37,9 @@
         <div class="nav-right">
           <div class="nav-login">
             <button class="nav-btn">
-              <a href="https://guidrpro.netlify.com/login">Get Started</a>
-            </button>
-            <button class="nav-btn">
-              <a href="https://guidrpro.netlify.com/login">Login</a>
+              <a href="https://guidrpro.netlify.com/login"
+                >Get Started / Login</a
+              >
             </button>
           </div>
           <div class="nav-bar">
@@ -81,85 +82,84 @@
       </button>
     </header>
 
-    <div class="wrapper">
-      <!-- Hero -->
-      <section class="hero">
-        <div class="main-section">
-          <div class="clip-text"><h1>&#8203;Guidr</h1></div>
-        </div>
-      </section>
-      <!-- Content -->
-      <section class="contact" id="contact">
-        <div class="main-section">
-          <h2>Contact Us</h2>
-          <p>
-            Questions? Concerns? Ideas? Go on an awesome trek? We'd love to hear
-            from you.
-          </p>
-          <div class="contact-form">
-            <form
-              action="https://formspree.io/r.poliakon@gmail.com"
-              method="POST"
-            >
-              <div class="form-info  flex-container">
-                <div class="form-name half">
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Name"
-                    id="name"
-                    required
-                  />
-                  <label class="label" for="name">Name</label>
-                </div>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="main-section">
+        <div class="clip-text"><h1>&#8203;Guidr</h1></div>
+      </div>
+    </section>
 
-                <div class="form-email half">
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    id="email"
-                    required
-                  />
-                  <label class="label" for="email">Email</label>
-                </div>
+    <!-- Content -->
+    <section class="contact" id="contact">
+      <div class="main-section">
+        <h2>Contact Us</h2>
+        <p>
+          Questions? Concerns? Ideas? Go on an awesome trek? We'd love to hear
+          from you.
+        </p>
+        <div class="contact-form">
+          <form
+            action="https://formspree.io/r.poliakon@gmail.com"
+            method="POST"
+          >
+            <div class="form-info  flex-container">
+              <div class="form-name half">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  id="name"
+                  required
+                />
+                <label class="label" for="name">Name</label>
               </div>
 
-              <div class="form-message">
-                <textarea
-                  name="message"
-                  placeholder="Message"
-                  id="message"
-                  rows="6"
-                ></textarea>
-                <label for="message">Message</label>
+              <div class="form-email half">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  id="email"
+                  required
+                />
+                <label class="label" for="email">Email</label>
               </div>
-              <div>
-                <input type="submit" value="Send Message" class="form-btn" />
-              </div>
-            </form>
-          </div>
+            </div>
+
+            <div class="form-message">
+              <textarea
+                name="message"
+                placeholder="Message"
+                id="message"
+                rows="6"
+              ></textarea>
+              <label class="label" for="message">Message</label>
+            </div>
+            <div>
+              <input type="submit" value="Send Message" class="form-btn" />
+            </div>
+          </form>
         </div>
-      </section>
-      <footer class="footer">
-        <div class="nav-logo">
-          <h3><a href="index.html">Guidr</a></h3>
-        </div>
-        <div class="nav-bar">
-          <a href="index.html#about" class="nav-link">About</a>
-          <a href="index.html#features" class="nav-link">Features</a>
-          <a href="contact.html" class="nav-link">Contact</a>
-          <a href="team.html" class="nav-link">Team</a>
-        </div>
-        <div class="nav-text">
-          <p>
-            &copy; 2019 Guidr
-          </p>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </section>
 
     <!-- Footer -->
+    <footer class="footer">
+      <div class="nav-logo">
+        <h3><a href="index.html">Guidr</a></h3>
+      </div>
+      <div class="nav-bar">
+        <a href="index.html#about" class="nav-link">About</a>
+        <a href="index.html#features" class="nav-link">Features</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="team.html" class="nav-link">Team</a>
+      </div>
+      <div class="nav-text">
+        <p>
+          &copy; 2019 Guidr
+        </p>
+      </div>
+    </footer>
   </body>
 
   <script>
